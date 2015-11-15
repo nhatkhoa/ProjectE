@@ -1,2 +1,4 @@
 api/.phpintel/
+*/.idea/
 api/storage/debugbar/
+
