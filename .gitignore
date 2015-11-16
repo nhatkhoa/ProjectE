@@ -2,3 +2,6 @@ api/.phpintel/
 */.idea/
 api/storage/debugbar/
 
+vendor/
+.idea/
+composer.lock
