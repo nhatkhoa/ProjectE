@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Category;
 
 class CategoryController extends Controller
 {
@@ -16,7 +17,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.category.index')->with('categories', Category::all());
     }
 
     /**
@@ -26,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.category.create');
     }
 
     /**
@@ -59,7 +60,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.category.edit')->with('category', Category::firstOrNew(['category_id' => $id ]));
     }
 
     /**
